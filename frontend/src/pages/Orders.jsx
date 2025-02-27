@@ -2,7 +2,7 @@ import React from 'react'
 
 const Orders = () => {
   return (
-    <div>
+    <div className='border-t pt-16'>
       
     </div>
   )
