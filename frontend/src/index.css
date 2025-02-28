@@ -8,6 +8,10 @@ a.active hr{
     font-family: Outfit;
 }
 
+button{
+    cursor: pointer;
+}
+
 .prata-regular {
     font-family: "Prata", serif;
     font-weight: 400;
