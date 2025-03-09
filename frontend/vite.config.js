@@ -8,5 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  server: {port: 5173}
+  resolve: {
+    alias: {
+      'react-router-dom': require.resolve('react-router-dom')
+    }
+  }
 })
