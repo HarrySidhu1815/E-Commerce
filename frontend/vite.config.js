@@ -10,12 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'react-router-dom': require.resolve('react-router-dom')
-    }
-  },
-  build: {
-    rollupOptions: {
-      external: []
+      'react-router-dom': path.resolve('node_modules/react-router-dom')
     }
   }
 })
