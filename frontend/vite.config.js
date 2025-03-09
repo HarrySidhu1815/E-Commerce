@@ -7,5 +7,15 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-  ]
+  ],
+  resolve: {
+    alias: {
+      'react-router-dom': require.resolve('react-router-dom')
+    }
+  },
+  build: {
+    rollupOptions: {
+      external: []
+    }
+  }
 })
