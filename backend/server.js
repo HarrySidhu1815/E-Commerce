@@ -14,7 +14,7 @@ const port = process.env.PORT || 4000
 const corsOptions = {
     origin: 'https://forever-admin-silk.vercel.app', // Allow requests from your frontend domain
     methods: ['GET', 'POST'], // Allowed HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    allowedHeaders: ['Content-Type', 'Authorization', 'token', 'origin'], // Allowed headers
   }
 
 connectDB()
