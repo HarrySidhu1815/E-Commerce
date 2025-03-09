@@ -3,7 +3,6 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import path from 'node:path'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -12,6 +11,11 @@ export default defineConfig({
   resolve: {
     alias: {
       'react-router-dom': path.resolve('node_modules/react-router-dom')
+    }
+  },
+  build: {
+    rollupOptions: {
+      external: ['react-toastify']
     }
   }
 })
