@@ -10,11 +10,18 @@ import orderRouter from './routes/orderRoute.js'
 
 const app = express()
 const port = process.env.PORT || 4000
+
+const corsOptions = {
+    origin: 'https://forever-admin-silk.vercel.app', // Allow requests from your frontend domain
+    methods: ['GET', 'POST'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  }
+
 connectDB()
 connectCloudinary()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions))
 
 // api endpoints
 app.use('/api/user', userRouter)
