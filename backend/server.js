@@ -12,7 +12,7 @@ const app = express()
 const port = process.env.PORT || 4000
 
 const corsOptions = {
-    origin: 'https://forever-admin-silk.vercel.app', // Allow requests from your frontend domain
+    origin: ['https://forever-admin-silk.vercel.app', 'http://localhost:5173', 'http://localhost:5174','http://localhost:5175'], // Allow requests from your frontend domain
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization', 'token', 'origin'], // Allowed headers
   }
